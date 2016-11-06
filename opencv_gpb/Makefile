@@ -1,11 +1,11 @@
 CC = g++
-CFLAGS = `pkg-config --cflags opencv` -I./include/gPb -I./include/sPb -I./include/seg
+CFLAGS = `pkg-config --cflags opencv` -I./include/gPb -I./include/sPb -I./include/seg -Ofast
 
 LIBS = `pkg-config --libs opencv` -L/opt/local/lib -larpack -lparpack -L/opt/local/lib/gcc47 -lgfortran
 
 SRC = 	src/main.cpp 		   \
 	src/gPb/globalPb.cpp       \
-	src/gPb/Filters.cpp        \
+	src/gPb/filters.cpp        \
 	src/sPb/buildW.cpp         \
 	src/sPb/ic.cpp             \
 	src/sPb/affinity.cpp       \
